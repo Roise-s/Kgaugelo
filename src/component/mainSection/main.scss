@@ -1,0 +1,103 @@
+.mainSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 50px;
+    margin-bottom: 120px;
+
+    .mainDiv1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        flex: 1.3;
+        padding-top: 100px;
+
+        .full {
+            @media (max-width: 300px) {
+                font-size: 30px;
+            }
+            font-weight: 600;
+            font-size: 50px;
+            margin-bottom: 20px;
+
+            &::selection {
+                background-color: rgba(196, 196, 13, 0.774);
+                color: white;
+            }
+        }
+
+        .innerFull {
+            font-size: 18px;
+            opacity: 0.7;
+            margin-bottom: 40px;
+
+            .nnn {
+                color: rgba(128, 0, 128, 0.774);
+
+                &::selection {
+                    color: rgba(128, 56, 128, 0.774);
+                    background-color: rgba(178, 253, 178, 0.288);
+                }
+            }
+
+            &::selection {
+                background-color: rgba(255, 255, 0, 0.74);
+            }
+        }
+
+        .innermainDiv1 {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding-right: 50px;
+
+            .innerInnerbtn {
+                height: 50px;
+                width: 50px;
+                margin-right: 20px;
+                border: none;
+                background: transparent;
+
+                .innerInnerbtnPic {
+                    height: 50px;
+                    width: 50px;
+                }
+
+                .innerInnerbtnPic1 {
+                    height: 47px;
+                    width: 50px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+
+                &:active {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    .mainDiv2 {
+        @media (max-width: 630px) {
+            display: none;
+        }
+        flex: 0.7;
+        margin-top: 50px;
+        padding-left: 50px;
+
+        .mainDiv2Pic {
+            height: 350px;
+            width: 270px;
+            border-radius: 25px;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}

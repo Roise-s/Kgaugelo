@@ -1,0 +1,57 @@
+.techlist {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(53, 53, 53, 0.74);
+}
+.techlist .divTech {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid rgba(53, 53, 53, 0.74);
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+.techlist .divTech .title {
+  font-size: 25px;
+  opacity: 0.7;
+}
+
+.techName {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+.front {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+}
+.front .divF {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.front .divF .ts {
+  height: 50px;
+  width: 250px;
+  margin-right: 30px;
+  border: transparent;
+  font-size: 20px;
+}
+@media (max-width: 400px) {
+  .front .divF .ts {
+    font-size: 18px;
+  }
+}
+.front .divF .years {
+  height: 50px;
+  width: 100px;
+  border: 0.5px solid black;
+  border-radius: 50px;
+  background: transparent;
+  font-size: 20px;
+}
+@media (max-width: 500px) {
+  .front .divF .years {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=index.css.map */

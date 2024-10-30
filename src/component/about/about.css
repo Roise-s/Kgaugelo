@@ -1,0 +1,41 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+}
+.about .aboutTitle {
+  font-size: 30px;
+  color: orange;
+  margin-bottom: 20px;
+}
+.about .aboutSub {
+  font-size: 45px;
+  font-weight: 600;
+  padding: 0 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .about .aboutSub {
+    font-size: 30px;
+  }
+}
+@media (max-width: 300px) {
+  .about .aboutSub {
+    font-size: 20px;
+  }
+}
+.about .aboutD {
+  font-size: 18px;
+  padding: 0 45px;
+  text-align: center;
+  opacity: 0.7;
+  margin-bottom: 50px;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=about.css.map */
