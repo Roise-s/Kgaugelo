@@ -20,7 +20,16 @@ const Header: React.FC = () => {
   return (
     <div className={`header ${sticky? 'dark-nav' : ''}`}>
       <div className="main">
-        <button className="mainbtn">Kgaugelo.dev</button>
+        <button className="mainbtn">
+          <Link
+            to='mainSection'
+            smooth={true}
+            offset={-75}
+            duration={500}
+          >
+            Kgaugelo.dev
+          </Link>
+        </button>
       </div>
       <div className="mainNav">
         <button className="innerNav">
@@ -76,22 +85,58 @@ const Header: React.FC = () => {
           <ul className={`menu-nav ${showMenu ? 'open' : ''}`}>
             <li className="menu-nav_item">
               <a href="menu-ds/project/p.html" className="menu-nav_link">
-                <button className="patcw js-projects">Tech Stack</button>
+                <button className="patcw js-projects">
+                <Link
+                  to='mainTech'
+                  smooth={true}
+                  offset={-90}
+                  duration={500}
+                >
+                  Tech Stack
+                </Link>
+                </button>
               </a>
             </li>
             <li className="menu-nav_item">
               <a href="menu-ds/About me/a.html" className="menu-nav_link">
-                <button className="patcw">About Me</button>
+                <button className="patcw">
+                <Link
+                  to='about'
+                  smooth={true}
+                  offset={-120}
+                  duration={500}
+                >
+                  About Me
+                </Link>
+                </button>
               </a>
             </li>
             <li className="menu-nav_item">
               <a href="menu-ds/Contact me/c.html" className="menu-nav_link">
-                <button className="patcw">Projects</button>
+                <button className="patcw">
+                <Link
+                  to='projects'
+                  smooth={true}
+                  offset={-90}
+                  duration={500}
+                >
+                  Projects
+                </Link>
+                </button>
               </a>
             </li>
             <li className="menu-nav_item">
               <a href="menu-ds/whats new/w.html" className="menu-nav_link">
-                <button className="patcw">Contact Me</button>
+                <button className="patcw">
+                <Link
+                  to='contact'
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  Contact Me
+                </Link>
+                </button>
               </a>
             </li>
           </ul>
