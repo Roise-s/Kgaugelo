@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './head.css';
-import {Link} from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const Header: React.FC = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -24,11 +24,45 @@ const Header: React.FC = () => {
       </div>
       <div className="mainNav">
         <button className="innerNav">
-          <Link />
+          <Link
+            to='mainTech'
+            smooth={true}
+            offset={-90}
+            duration={500}
+          >
+            Tech Stack
+          </Link>
         </button>
-        <button className="innerNav">About Me</button>
-        <button className="innerNav">Projects</button>
-        <button className="innerNav">Contact Me</button>
+        <button className="innerNav">
+          <Link
+            to='about'
+            smooth={true}
+            offset={-120}
+            duration={500}
+          >
+            About Me
+          </Link>
+        </button>
+        <button className="innerNav">
+        <Link
+            to='projects'
+            smooth={true}
+            offset={-90}
+            duration={500}
+          >
+            Projects
+          </Link>
+        </button>
+        <button className="innerNav">
+        <Link
+            to='contact'
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Contact Me
+          </Link>
+        </button>
       </div>
 
       <div className="right-section">
