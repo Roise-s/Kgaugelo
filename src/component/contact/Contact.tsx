@@ -10,6 +10,7 @@ const Contact = () => {
 
   const [result, setResult] = useState("");
 
+  // @ts-ignore
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
