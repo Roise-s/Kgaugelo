@@ -13,12 +13,18 @@ const Main = () => {
             experience
             </p>
             <div className="innermainDiv1">
-                <button className="innerInnerbtn">
-                    <img src={pic1} alt="LinkedIn" className='innerInnerbtnPic'/>
-                </button>
-                <button className="innerInnerbtn">
-                    <img src={pic2} alt="GitHub" className='innerInnerbtnPic1' />
-                </button>
+                <a href="https://www.linkedin.com/in/kgaugelo-tladi-1060262b9/" target='_blank'>
+                    <button className="innerInnerbtn">
+                        <img src={pic1} alt="LinkedIn" className='innerInnerbtnPic'/>
+                    </button>
+                </a>
+                
+                <a href="https://github.com/Roise-s" target='_blank'>
+                    <button className="innerInnerbtn">
+                        <img src={pic2} alt="GitHub" className='innerInnerbtnPic1' />
+                    </button>
+                </a>
+                
             </div>
         </div>
         <div className="mainDiv2">

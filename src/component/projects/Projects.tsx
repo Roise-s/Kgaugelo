@@ -24,12 +24,18 @@ const Projects = () => {
             <button className='btnBoxss'>
                SASS
             </button>
-            <button className='btnBoxss2'>
-              View Code
-            </button>
-            <button className='btnBoxss2'>
-              Live Demo
-            </button>
+            <a href="https://github.com/Roise-s/edu" target='_blank'>
+              <button className='btnBoxss2'>
+                View Code
+              </button>
+            </a>
+            
+            <a href="https://roise-s.github.io/edu/" target='_blank'>
+              <button className='btnBoxss2'>
+                Live Site
+              </button>
+            </a>
+            
           </div>
         </div>
       </div>

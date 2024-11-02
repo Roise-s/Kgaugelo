@@ -6,12 +6,18 @@ const Footer = () => {
   return (
     <div className='footer'>
       <p className="footText">Copyright © 2024. All right are reserved</p>
-      <button className="footBtn">
-        <img src={footPic1} alt="LinkedIn" className="footBtnImg" />
-      </button>
-      <button className="footBtn">
-        <img src={footPic} alt="GitHub" className="footBtnImg" />
-      </button>
+      <a href="https://www.linkedin.com/in/kgaugelo-tladi-1060262b9/" target='_blank'>
+        <button className="footBtn">
+          <img src={footPic1} alt="LinkedIn" className="footBtnImg" />
+        </button>
+      </a>
+      
+      <a href="https://github.com/Roise-s" target='_blank'>
+        <button className="footBtn">
+          <img src={footPic} alt="GitHub" className="footBtnImg" />
+        </button>
+      </a>
+      
     </div>
   )
 }
