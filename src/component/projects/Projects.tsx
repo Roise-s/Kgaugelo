@@ -16,7 +16,7 @@ const Projects = () => {
         <div className="pro1">
           <p className="proTitle">Client's Projects</p>
           <p className="proD">
-            Is a Construction website for Daniel Makapane Projects 
+            Is a Construction website for Daniel Makapane Projects.The site has been designed with construction business in mind, focusing on key goals discussed, e.g., showcasing their services, improving client engagement, and enhancing online visibility.
           </p>
           <div className="boxss">
             <button className='btnBoxss'>
