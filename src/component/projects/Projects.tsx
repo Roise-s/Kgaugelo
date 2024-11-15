@@ -14,24 +14,24 @@ const Projects = () => {
           <img className='proImgss' src={picc1} alt="Project Picture" />
         </div>
         <div className="pro1">
-          <p className="proTitle">EDU</p>
+          <p className="proTitle">Client's Projects</p>
           <p className="proD">
-            Edu, is a multi-campus public research university. This Website is made to highlight my skills in React working with Vite to improve performance.... and improving my skills with React Scroll
+            Is a Construction website for Daniel Makapane Projects 
           </p>
           <div className="boxss">
             <button className='btnBoxss'>
-              React with Vite
+              Vite & Express.js
             </button>
             <button className='btnBoxss'>
                SASS
             </button>
-            <a href="https://github.com/Roise-s/edu" target='_blank'>
+            <a href="https://github.com/Roise-s/DMP" target='_blank'>
               <button className='btnBoxss2'>
                 View Code
               </button>
             </a>
             
-            <a href="https://roise-s.github.io/edu/" target='_blank'>
+            <a href="https://dmp-mocha.vercel.app/" target='_blank'>
               <button className='btnBoxss2'>
                 Live Site
               </button>
