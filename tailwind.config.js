@@ -1,22 +1,35 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
-      animation: {
-        orbit: "orbit calc(var(--duration)*1s) linear infinite",
+      fontFamily: {
+        zentry: ['zentry', 'sanf-serif'],
+        general: ['general', 'sanf-serif'],
+        'circular-web': ['circular-web', 'sanf-serif'],
+        'robert-medium': ['robert-medium', 'sanf-serif'],
+        'robert-regular': ['robert-regular', 'sanf-serif'],
       },
-      keyframes: {
-        orbit: {
-          "0%": {
-            transform:
-              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
-          },
-          "100%": {
-            transform:
-              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
-          },
+      colors: {
+        blue: {
+          50: '#DFDFF0',
+          75: '#DFDFF2',
+          100: '#F0F2FA',
+          200: '#010101',
+          300: '#4FB7DD',
         },
-      },
+        violet: {
+          300: '#5724FF',
+        },
+        yellow: {
+          100: '#8E983F',
+          300: '#EDFF66',
+        }
+      }
     },
   },
-};
+  plugins: [],
+}
