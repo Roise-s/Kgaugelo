@@ -35,9 +35,9 @@ const About = () => {
 
         <AnimatedTitle title="Disc<b>o</b>ver the world's <br /> B<b>e</b>st Soft<b>w</b>are Development" containerClass="mt-5 !text-black text-center" />
 
-        <div className="about-subtext mt-70 z-10 text-gray font-semibold">
+        <div className="about-subtext mt-70  text-gray">
             <p className="">
-            As a Full Stack Developer, I possess an impressive arsenal of skills in HTML, CSS, SASS/SCSS, TailwindCSS, JavaScript, TypeScript, React, React Native, Next.js, Appwrite, Node.js, Express.js, MongoDB. I excel in designing and maintaining responsive websites that offer a smooth user experience. My expertise lies in crafting dynamic, engaging interfaces and APIs through writing clean and optimized code and utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaboration with cross-functional teams to produce outstanding web applications
+            As a Full Stack Developer, I possess an impressive arsenal of skills in HTML, CSS, SASS/SCSS, TailwindCSS, JavaScript, TypeScript, React, React Native, Next.js, Appwrite, Node.js, Express.js, MongoDB.
             </p>
         </div>
       </div>
