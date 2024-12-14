@@ -140,12 +140,12 @@ const Features = () => (
           src="videos/feature-1.mp4"
           title={
             <>
-              Client's Projec<b>t</b>s
+              Xo<b>r</b>a
             </>
           }
-          description="Is a Construction website for Daniel Makapane Projects.The site has been designed with construction business in mind, focusing on key goals discussed, e.g., showcasing their services, improving client engagement, and enhancing online visibility."
+          description="Xora is a Modern UI/UX SaaS website developed using React.js and Tailwind CSS that exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard, serving as a reference or inspiration for future modern applications or websites in general."
           isComingSoon={false}
-          site='https://dmp-mocha.vercel.app/'
+          site='https://xoraa.vercel.app/'
         />
       </BentoTilt>
 
@@ -169,11 +169,12 @@ const Features = () => (
             src="videos/feature-3.mp4"
             title={
               <>
-                n<b>e</b>xus
+                Client's Proj<b>e</b>ct
               </>
             }
-            description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
-            isComingSoon
+            description="Is a Construction website for Daniel Makapane Projects.The site has been designed with construction business in mind, focusing on key goals discussed, e.g., showcasing their services, improving client engagement, and enhancing online visibility."
+            isComingSoon={false}
+            site='https://dmp-mocha.vercel.app/'
           />
         </BentoTilt>
 
