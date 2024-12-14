@@ -172,7 +172,7 @@ const Features = () => (
                 Client's Proj<b>e</b>ct
               </>
             }
-            description="Is a Construction website for Daniel Makapane Projects.The site has been designed with construction business in mind, focusing on key goals discussed, e.g., showcasing their services, improving client engagement, and enhancing online visibility."
+            description="The site has been designed with construction business in mind, focusing on key goals discussed."
             isComingSoon={false}
             site='https://dmp-mocha.vercel.app/'
           />
