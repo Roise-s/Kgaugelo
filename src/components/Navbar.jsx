@@ -1,97 +1,111 @@
-import React, { useState, useEffect, useRef } from 'react'
-import Button from './Button'
-import { TiLocationArrow } from 'react-icons/ti'
-import { useWindowScroll } from 'react-use';
-import gsap from 'gsap';
+import React, { useState } from "react";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+import { CgGitFork } from "react-icons/cg";
+import { ImBlog } from "react-icons/im";
+import {
+  AiFillStar,
+  AiOutlineHome,
+  AiOutlineFundProjectionScreen,
+  AiOutlineUser,
+} from "react-icons/ai";
 
-const navItems = ['Home', 'Email', 'Projects', 'About', 'Contact'];
+import { CgFileDocument } from "react-icons/cg";
 
-const Navbar = () => {
+function NavBar() {
+  const [expand, updateExpanded] = useState(false);
+  const [navColour, updateNavbar] = useState(false);
 
-    const [isAudioPlaying, setIsAudioPlaying] = useState(false)
-    const [isIndicatorActive, setIsIndicatorActive] = useState(false)
-
-    const [lastScrollY, setLastScrollY] = useState(0)
-    const [isNavVisible, setIsNavVisible] = useState(true)
-
-    const navContainerRef = useRef(null)
-    const audioElementRef = useRef(null)
-
-    const { y: currentScrollY } = useWindowScroll();
-
-    useEffect(() => {
-        if (currentScrollY === 0) {
-            setIsNavVisible(true)
-            navContainerRef.current.classList.remove('floating-nav')
-        } else if (currentScrollY > lastScrollY) {
-            setIsNavVisible(false)
-            navContainerRef.current.classList.add('floating-nav')
-        } else if (currentScrollY < lastScrollY) {
-            setIsNavVisible(true)
-            navContainerRef.current.classList.add('floating-nav')
-        }
-
-        setLastScrollY(currentScrollY)
-    }, [currentScrollY, lastScrollY])
-
-    useEffect(() => {
-        gsap.to(navContainerRef.current, {
-            y: isNavVisible ? 0 : -100,
-            opacity: isNavVisible ? 1 : 0,
-            duration: 0.2,
-        })
-    }, [isNavVisible])
-
-    const toggleAudioIndicator = () => {
-        setIsAudioPlaying((prev) => !prev)
-
-        setIsIndicatorActive((prev) => !prev)
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
     }
+  }
 
-    useEffect(() => {
-        if (isAudioPlaying) {
-            audioElementRef.current.play()
-        } else {
-            audioElementRef.current.pause()
-        }
-    }, [isAudioPlaying])
+  window.addEventListener("scroll", scrollHandler);
 
   return (
-    <div ref={navContainerRef} className='fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6'>
-      <header className='absolute top-1/2 w-full -translate-y-1/2'>
-        <nav className='flex size-full items-center justify-between p-4'>
-            <div className="flex items-center gap-7">
-                <img src="/img/logo.png" alt="logo" className='w-10' />
+    <Navbar
+      expanded={expand}
+      fixed="top"
+      expand="md"
+      className={navColour ? "sticky" : "navbar"}
+    >
+      <Container>
+        <Navbar.Brand href="/" className="d-flex">
+          <p className="sgitse">Kt.</p>
+        </Navbar.Brand>
+        <Navbar.Toggle
+          aria-controls="responsive-navbar-nav"
+          onClick={() => {
+            updateExpanded(expand ? false : "expanded");
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </Navbar.Toggle>
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto" defaultActiveKey="#home">
+            <Nav.Item>
+              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+              </Nav.Link>
+            </Nav.Item>
 
-                <Button
-                    id="product-button"
-                    title="Welcome"
-                    rightIcon={<TiLocationArrow />}
-                    containerClass="bg-blue-50 md:flex hidden items-center jusitify-center gap-1"
-                />
-            </div>
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/about"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              </Nav.Link>
+            </Nav.Item>
 
-            <div className="flex h-full items-center">
-                <div className="hidden md:block">
-                    {navItems.map((item) => (
-                        <a key={item} className='nav-hover-btn' href={`#${item.toLowerCase()}`} >
-                            {item}
-                        </a>
-                    ))}
-                </div>
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/project"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                Projects
+              </Nav.Link>
+            </Nav.Item>
 
-                <button className='ml-10 flex items-center space-x-0.5' onClick={toggleAudioIndicator}>
-                    <audio ref={audioElementRef} className='hidden' src="/audio/loop.mp3" loop />
-                        {[1, 2, 3, 4].map((bar) => (
-                            <div key={bar} className={`indicator-line ${isIndicatorActive ? 'active' : ''}`} style={{ animationDelay: `${bar * 0.1}s`}} />
-                        ))}
-                    
-                </button>
-            </div>
-        </nav>
-      </header>
-    </div>
-  )
+            <Nav.Item>
+              <Nav.Link
+                href="https://hit-me-up-7dua.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ImBlog style={{ marginBottom: "2px" }} /> Contact me
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item className="fork-btn">
+              <Button
+                href="https://github.com/Roise-s/Kgaugelo"
+                target="_blank"
+                className="fork-btn-inner"
+              >
+                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
+                <AiFillStar style={{ fontSize: "1.1em" }} />
+              </Button>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default Navbar
+export default NavBar;

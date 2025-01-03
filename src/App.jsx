@@ -1,23 +1,48 @@
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Features from "./components/Features"
-import Footer from "./components/Footer"
-import Hero from "./components/Hero"
-import Navbar from "./components/Navbar"
-import Story from "./components/Story"
+import React, { useState, useEffect } from "react";
+import Preloader from "../src/components/Pre";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import "./style.css";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const App = () => {
+function App() {
+  const [load, upadateLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <main className="relative min-h-screen w-screen overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <About />
-      <Features />
-      <Story />
-      <Contact />
-      <Footer />
-    </main>
-  )
+    <Router>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/project" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Navigate to="/"/>} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
