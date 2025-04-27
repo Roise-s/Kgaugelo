@@ -1,0 +1,10 @@
+.contactMe:hover {
+  cursor: pointer;
+}
+.contactMe:active {
+  opacity: 0.5;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=Style.css.map */

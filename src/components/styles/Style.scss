@@ -1,0 +1,14 @@
+.contactMe {
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+a {
+    text-decoration: none;
+}
