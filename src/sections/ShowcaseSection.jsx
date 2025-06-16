@@ -45,16 +45,16 @@ const ShowcaseSection = () => {
          <div className="showcaselayout">
             {/* LEFT */}
             <div className="first-project-wrapper" ref={project1Ref}>
-                <a href="https://xoraa.vercel.app/" target='_blank'>
+                <a href="https://geminipro-one-umber.vercel.app/" target='_blank'>
                     <div className="image-wrapper">
-                    <img src='/images/az.png' alt='Ryde' />
+                    <img src='/images/azz.png' alt='Ryde' />
                     </div>
                     <div className="text-content">
                     <h2>
-                        Xora, a Modern UI/UX SaaS website.
+                        Kasi AI, a Large Language Model website.
                     </h2>
                     <p className='text-white-50 md:text-xl'>
-                        A Modern UI/UX SaaS website developed using React.js and Tailwind CSS that exemplifies modern UI/UX principles. Its sleek design, seamless animations, and overall user experience set a high standard, serving as a reference or inspiration for future modern applications or websites in general.
+                        This project is a simple text generator built using a large language model (LLM), basically an AI that’s really good at working with text. It's a web-based app where you enter a prompt, hit a button, and the AI gives you back a response. Could be a sentence, a paragraph, or more.
                     </p>
                 </div>
                 </a>
@@ -62,21 +62,21 @@ const ShowcaseSection = () => {
             </div>
             {/* RIGHT */}
             <div className="project-list-wrapper overflow-hidden">
-                <a href="https://zeenxumalo.vercel.app/" target='_blank'>
+                <a href="https://xoraa.vercel.app/" target='_blank'>
                     <div className="project" ref={project2Ref}>
                         <div className="">
-                            <img src='/images/aza.png' alt='Library Management Platform' />
+                            <img src='/images/az.png' alt='Library Management Platform' />
                         </div>
-                        <h2>Zee Nxumalo's Website</h2>
+                        <h2>Xora, a Modern UI/UX SaaS website.</h2>
                     </div>
                 </a>
 
-                <a href="https://roise-s.github.io/edu/" target='_blank'>
+                <a href="https://zeenxumalo.vercel.app/" target='_blank'>
                     <div className="project" ref={project3Ref}>
                         <div className="">
-                            <img src='/images/a3a.png' alt='YC Directory' />
+                            <img src='/images/aza.png' alt='YC Directory' />
                         </div>
-                        <h2>Edusity</h2>
+                        <h2>Zee Nxumalo's Website</h2>
                     </div>
                 </a>
                 
